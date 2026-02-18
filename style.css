@@ -1,0 +1,438 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+/* ---------- main.html ---------- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* ---------- MAIN PAGE ---------- */
+.main-page {
+    height: 100vh;
+    background: url("images/banner.png") no-repeat center center;
+    background-size: cover;
+}
+
+.overlay {
+    height: 100vh;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* ---------- LOGO ---------- */
+.logo {
+    font-size: 70px;
+    letter-spacing: 6px;
+    margin-bottom: 20px;
+}
+
+.logo .anime {
+    color: #9b3a2e;
+}
+
+.logo .eiei {
+    color: #000;
+}
+
+/* ---------- LINE ---------- */
+.center-line {
+    width: 65%;
+    height: 6px;
+    background: #000;
+    position: relative;
+    margin: 20px 0 40px;
+}
+
+.center-line .dot {
+    width: 40px;
+    height: 40px;
+    background: #c40000;
+    border-radius: 50%;
+    position: absolute;
+    top: -17px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* ---------- BUTTON ---------- */
+.watch-btn {
+    padding: 18px 70px;
+    background: #9b3a2e;
+    color: #000;
+    font-size: 26px;
+    text-decoration: none;
+    border-radius: 50px;
+    transition: 0.3s;
+}
+
+.watch-btn:hover {
+    background: #7a2e24;
+    color: #fff;
+}
+
+
+/* ---------- index.html ---------- */
+/* ---------- INDEX PAGE ---------- */
+.index-page {
+    background: url("images/anime-bg.png") no-repeat center/cover;
+    min-height: 100vh;
+    padding: 40px 0;
+}
+
+/* หัวข้อ */
+.anime-title {
+    text-align: center;
+    color: #fff;
+    font-size: 50px;
+    letter-spacing: 5px;
+    margin-bottom: 40px;
+}
+
+/* กล่องรวมวงกลม */
+.circle-container {
+    width: 80%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 วงต่อแถว */
+    gap: 40px;
+    justify-items: center;
+}
+
+/* วงกลม */
+.circle {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    background-size: cover;
+    background-position: center;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+.circle:hover {
+    transform: scale(1.2);
+}
+
+.anime-info {
+    position: fixed;
+    bottom: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(255, 255, 255, 0.8);
+    color: rgb(0, 0, 0);
+    padding: 20px 40px;
+    border-radius: 15px;
+    text-align: center;
+    display: none;
+    transition: 0.3s;
+}
+
+
+/* ---------- contact.html ---------- */
+.contact-page {
+    background: #9b3a2e;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact-container {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.profile-img img {
+    width: 250px;
+    height: 250px;
+    border-radius: 60%;
+    border: 10px solid #fff;
+    object-fit: cover;
+}
+
+.profile-text {
+    color: #fff;
+}
+
+.profile-text h2 {
+    font-size: 50px;
+}
+
+.profile-text p {
+    font-size: 24px;
+    margin-top: 10px;
+}
+/* ลิงก์ครอบทั้งหน้า */
+.full-link {
+    display: block;
+    width: 100%;
+    height: 100vh;
+    text-decoration: none;
+    color: inherit;
+}
+
+/* กันไม่ให้ตัวอักษรเปลี่ยนสี */
+.full-link * {
+    cursor: pointer;
+}
+.corner-btn {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+
+    padding: 14px 28px;
+    background: #9b3a2e;
+    color: #fff;
+    font-size: 18px;
+    text-decoration: none;
+    border-radius: 30px;
+
+    box-shadow: 0 6px 15px rgba(0,0,0,0.4);
+    transition: 0.3s;
+}
+
+.corner-btn:hover {
+    background: #7a2e24;
+    transform: translateY(-4px);
+}
+/* กลีบซากุระ */
+.sakura {
+    position: fixed;
+    top: -50px;
+    width: 15px;
+    height: 15px;
+    background: pink;
+    border-radius: 50% 50% 50% 0;
+    opacity: 0.8;
+    pointer-events: none;
+    animation: fall linear forwards;
+    z-index: 0;
+}
+
+/* Animation การร่วง */
+@keyframes fall {
+    to {
+        transform: translateY(110vh) rotate(360deg);
+    }
+}
+
+/* ทำให้เนื้อหาอยู่ด้านหน้า */
+.index-page {
+    position: relative;
+    z-index: 1;
+}
+.main-header {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+
+.logo {
+    width: 90px;       /* ปรับขนาดได้ */
+    height: 90px;      /* ต้องเท่ากับ width */
+    border-radius: 50%; /* ทำให้เป็นวงกลม */
+    object-fit: cover;  /* ตัดภาพให้พอดีวงกลม */
+}
+.index-page::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.5);
+    backdrop-filter: blur(8px);
+    z-index: -1;
+}
+
+/* ทำให้วงกลมมีกรอบใส */
+.circle {
+    border: 3px solid rgba(255,255,255,0.4);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.6);
+}
+
+/* hover ดูเรืองแสง */
+.circle:hover {
+    transform: scale(1.15);
+    box-shadow: 0 0 25px #ff4d6d;
+}
+
+/* กล่องข้อมูล */
+.anime-info {
+    backdrop-filter: blur(10px);
+    background: rgba(255,255,255,0.15);
+    color: #fff;
+    border: 1px solid rgba(255,255,255,0.3);
+    text-shadow: 0 0 20px #ffb7c5;
+}
+.anime-title::after {
+    content: "";
+    display: block;
+    width: 200px;
+    height: 5px;
+    background: linear-gradient(to right, #ff9a9e, #fad0c4);
+    margin: 15px auto 0;
+    border-radius: 10px;
+}
+.popup-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.7);
+    backdrop-filter: blur(6px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.4s ease;
+    z-index: 999;
+}
+
+/* เปิด popup */
+.popup-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* ===== POPUP BOX ===== */
+.popup-box {
+    width: 400px;
+    background: #111;
+    color: #fff;
+    border-radius: 20px;
+    padding: 25px;
+    text-align: center;
+    transform: scale(0.7);
+    opacity: 0;
+    transition: 0.4s ease;
+    box-shadow: 0 0 40px rgba(255,0,0,0.5);
+}
+
+/* animation ตอนเปิด */
+.popup-overlay.active .popup-box {
+    transform: scale(1);
+    opacity: 1;
+}
+
+/* รูปด้านบน */
+.popup-image {
+    width: 100%;
+    height: 200px;
+    border-radius: 15px;
+    background-size: cover;
+    background-position: center;
+    margin-bottom: 20px;
+}
+
+/* ปุ่มปิด */
+.close-btn {
+    position: absolute;
+    top: 15px;
+    right: 25px;
+    font-size: 28px;
+    cursor: pointer;
+}
+
+/* ปุ่ม Watch */
+.watch-now {
+    margin-top: 20px;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 30px;
+    background: #e50914;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.watch-now:hover {
+    background: #b20710;
+    transform: scale(1.1);
+}
+.contact-page {
+    background: linear-gradient(135deg, #2b0a0a, #7a2e24, #000);
+    background-size: 400% 400%;
+    animation: bgMove 10s ease infinite;
+    overflow: hidden;
+}
+
+/* พื้นหลังขยับช้า ๆ */
+@keyframes bgMove {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* กล่องหลัก */
+.contact-container {
+    background: rgba(255,255,255,0.1);
+    backdrop-filter: blur(15px);
+    border-radius: 25px;
+    padding: 50px 70px;
+    box-shadow: 0 0 40px rgba(0,0,0,0.6);
+    animation: fadeUp 1s ease forwards;
+    opacity: 0;
+    transform: translateY(40px);
+}
+
+/* Animation ตอนโหลด */
+@keyframes fadeUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ===== PROFILE IMAGE EFFECT ===== */
+
+.profile-img img {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    border: 6px solid #fff;
+    transition: 0.4s ease;
+    box-shadow: 0 0 25px rgba(255,255,255,0.4);
+}
+
+/* Hover หมุนเบา ๆ */
+.profile-img img:hover {
+    transform: scale(1.1) rotate(5deg);
+    box-shadow: 0 0 40px #ff4d6d;
+}
+
+/* ===== TEXT STYLE ===== */
+
+.profile-text h2 {
+    font-size: 45px;
+    letter-spacing: 2px;
+    background: linear-gradient(to right, #ffffff, #ffb7c5);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.profile-text p {
+    font-size: 22px;
+    margin-top: 15px;
+    color: #f1f1f1;
+}
+
+/* ปุ่ม Home ให้ดูเท่ขึ้น */
+.corner-btn {
+    background: linear-gradient(45deg, #ff4d6d, #e50914);
+    font-weight: bold;
+}
+
+.corner-btn:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 20px #ff4d6d;
+}
